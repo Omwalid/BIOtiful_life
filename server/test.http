@@ -1,0 +1,38 @@
+###
+POST http://localhost:5001/users/register
+Content-Type: application/json
+
+{ "fullName":"walid", "userName":"omw","email": "test@omw.com", "password": "jaja", "userRole": "costumer" }
+
+###
+POST http://localhost:5001/users/login
+Content-Type: application/json
+
+{ "email": "test@omw.com", "password": "jaja" }
+###
+GET http://localhost:5000/admin/getStock/vegetables
+Content-Type: application/json
+
+###
+POST http://localhost:5000/admin/addProduct
+Content-Type: application/json
+
+{"productName": "eggs","productType": "others","unitOfMeasure": "kg","productQuantity": 150,"productPrice": 50.6,"productDescription": "productDescription : hay"}
+
+###
+DELETE http://localhost:5000/admin/deleteProduct/39&eggs
+Content-Type: application/json
+
+###
+GET http://localhost:5000/admin/updateProduct
+Content-Type: application/json
+
+{"productId":39,"productName": "eggs","productQuantity": 0,"productPrice": 50.6,"productDescription": "updated"}
+
+
+
+###
+POST http://localhost:5000/orders/addOrder
+Content-Type: application/json
+
+{"userId": "3","productId": "2","orderQuantity": "20","userAddress": "aadl"}
